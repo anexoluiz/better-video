@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player de Vídeo Personalizado</title>
+  </head>
+  <body>
+    <h1>Página com multiplos vídeos para testar implementação multipla</h1>
+    <p>Parágrafo de teste.</p>
+    <video width="600" controls>
+      <source
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <video width="600" controls>
+      <source
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <script src="main.js"></script>
+    <script>
+      // dynamic detection testing
+      setTimeout(() => {
+        const video = document.createElement("video");
+        video.setAttribute("controls", "controls");
+        video.setAttribute("width", "600");
+        const source = document.createElement("source");
+        source.setAttribute(
+          "src",
+          "https://www.w3schools.com/html/mov_bbb.mp4"
+        );
+        source.setAttribute("type", "video/mp4");
+        video.appendChild(source);
+        document.body.appendChild(video);
+      }, 2000);
+    </script>
+  </body>
+</html>
